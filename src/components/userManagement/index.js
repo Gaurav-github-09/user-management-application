@@ -100,6 +100,7 @@ function UserManagement() {
             department: '',
           })
           return
+          
         }
 
         const method = user.id ? 'PUT' : 'POST'
@@ -117,6 +118,26 @@ function UserManagement() {
 
         if (method === 'POST') {
           // Add new user
+          
+          if (users.length > 5){
+            const newUserUpdated= {
+              id: users.length+1,
+              firstName: user.firstName,
+              lastName: user.lastName,
+              email: user.email,
+              department: user.department,
+            }
+            setUsers([...users, newUserUpdated])
+            setUser({
+              id: null,
+              firstName: '',
+              lastName: '',
+              email: '',
+              department: '',
+            })
+            return
+          }
+          
           const newUser = await response.json()
           setUsers([...users, newUser])
         } else {
@@ -146,6 +167,7 @@ function UserManagement() {
   }
 
   const handleEdit = userToEdit => {
+    
     setUser({
       id: userToEdit.id,
       firstName: userToEdit.firstName,
