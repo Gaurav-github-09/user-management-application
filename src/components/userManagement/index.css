@@ -1,0 +1,199 @@
+/* Write your CSS here */
+
+/* Global Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+  }
+  
+  .currentPage {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px 10px;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bolder;
+  }
+  
+  .main-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0e0e0e;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 30px;
+  }
+  .main-cont2 {
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+  }
+  .cont1 {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 30px 0px 30px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 16px 0px #eeeff1;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .formElement {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: bolder;
+    margin: 25px 10px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .userMan {
+    text-align: center;
+    font-size: 55px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .addEdit {
+    text-align: center;
+    font-size: 35px;
+    color: #000000;
+    font-weight: bolder;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Table Styles */
+  table {
+    border-collapse: collapse;
+  
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+    font-weight: bolder;
+    flex-wrap: wrap;
+    flex-grow: 5;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .cont2 {
+    display: table;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 5px 0px 30px 0px;
+  }
+  
+  th,
+  td {
+    border: 2px solid #0e0c0c;
+    padding: 8px;
+    color: #3b3a3a;
+    word-break: break-word;
+    font-weight: bold;
+    text-align: left;
+  
+    font-size: medium;
+  }
+  
+  th {
+    color: #020101;
+    font-weight: bold;
+    font-size: larger;
+    background-color: #f2f2f2;
+  }
+  
+  /* Form Styles */
+  .user-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+  
+    background-color: #f8f8f8;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: larger;
+    margin-left: 2px;
+  }
+  
+  input[type='text'],
+  input[type='email'] {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: #3f3f3f;
+    padding: 10px;
+    font-size: medium;
+    border: 1px solid #b9b9b9;
+    border-radius: 10px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    background-color: #575151;
+    color: white;
+    border: none;
+    font-size: small;
+    margin: 5px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #000000;
+    border: 2px solid #6f0404;
+    font-size: small;
+    font-weight: bold;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 20px;
+    padding-left: 7px;
+    font-weight: bolder;
+    font-size: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .addEdit {
+      font-size: 30px;
+    }
+    .userMan {
+      font-size: 35px;
+    }
+  
+    th,
+    td {
+      font-size: smaller;
+    }
+    th {
+      font-size: small;
+      font-weight: bolder;
+    }
+  
+    button {
+      font-size: small;
+      padding: 10px;
+    }
+    button:hover {
+      font-size: small;
+    }
+  }
+  
