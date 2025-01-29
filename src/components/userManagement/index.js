@@ -118,10 +118,30 @@ function UserManagement() {
 
         if (method === 'POST') {
           // Add new user
+
+          if (users.length === 0){
+            const newUserUpdated= {
+              id: 1,
+              firstName: user.firstName,
+              lastName: user.lastName,
+              email: user.email,
+              department: user.department,
+            }
+            setUsers([...users, newUserUpdated])
+            setUser({
+              id: null,
+              firstName: '',
+              lastName: '',
+              email: '',
+              department: '',
+            })
+            return
+          }
+          
           
           if (users.length > 5){
             const newUserUpdated= {
-              id: users.length+1,
+              id: users[users.length-1].id+1,
               firstName: user.firstName,
               lastName: user.lastName,
               email: user.email,
@@ -139,7 +159,14 @@ function UserManagement() {
           }
           
           const newUser = await response.json()
-          setUsers([...users, newUser])
+          const newUserUpdated= {
+            id: users[users.length-1].id+1,
+            firstName: newUser.firstName,
+            lastName: newUser.lastName,
+            email: newUser.email,
+            department: newUser.department,
+          }
+          setUsers([...users, newUserUpdated])
         } else {
           // Update existing user
           const updatedUsers = users.map(u =>
